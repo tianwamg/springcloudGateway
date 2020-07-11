@@ -26,6 +26,11 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
+    <modules>
+        <module>gateway-filter</module>
+        <module>gatewap-predicate</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
