@@ -1,0 +1,26 @@
+
+server:
+  port: 8081
+spring:
+  application:
+    name: gateway-eureka
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled:  false
+          lowerCaseServiceId: true
+      routes:
+      - id: add_request_header_route
+        uri: lb://SERVICE-XXX   #服务地址
+        filters:
+        - StripPrefix=1
+        predicates:
+        - Path=/demo/**
+  profiles: add_request_header_route
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

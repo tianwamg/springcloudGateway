@@ -29,6 +29,7 @@
     <modules>
         <module>gateway-filter</module>
         <module>gateway-predicate</module>
+        <module>gateway-eureka</module>
     </modules>
 
     <dependencyManagement>
